@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,39 +9,78 @@
 body {
   line-height: 1.2;
   font-size: 16px;
-  font-family: Helvetica, sans-serif;
-  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
   background: #2d343c;
 }
 
-h3, h4 {
-  font-weight: 400;
+.sidebar {
+  background: #22272b;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  max-width: 55px;
+  width: 100%;
+  transition: max-width 0.3s ease-in-out;
 }
-
-.container {
-  max-width: 650px;
-  margin: 0 auto;
+.sidebar ul {
+  padding: 15px 0;
 }
-
-.main {
-  padding: 40px 0;
+.sidebar ul:not(:last-of-type) {
+  border-bottom: 1px solid #2d3439;
 }
-
-.footer {
-  padding-bottom: 40px;
+.sidebar ul:last-of-type {
+  border-top: 1px solid #2d3439;
+}
+.sidebar ul li {
+  padding: 2px 15px 2px 13px;
+  border-left: 2px solid #22272b;
+  transition: border-color 0.2s ease-in-out;
+}
+.sidebar ul li a {
+  display: flex;
+  font-size: 20px;
   text-align: center;
-}
-
-.legal {
-  font-size: 12px;
-}
-.legal a {
-  color: #ff9e15;
+  color: #4f5b64;
+  transition: color 0.2s ease-in-out;
   text-decoration: none;
 }
-.legal a:hover {
-  text-decoration: underline;
+.sidebar ul li a:hover {
+  color: #36bd7b;
+}
+.sidebar ul li a span {
+  display: block;
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  font-size: 14px;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+.sidebar ul li:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+.sidebar ul li.active {
+  border-color: #36bd7b;
+  padding-left: 13px;
+}
+.sidebar-socials {
+  margin-top: auto;
+}
+.sidebar.extend {
+  max-width: 150px;
+}
+.sidebar.extend ul li a span {
+  opacity: 1;
+  width: auto;
+  margin-left: 15px;
+}
+.sidebar.extend #sidebar-toggler {
+  color: #36bd7b;
 }
 
 .player {
@@ -112,6 +152,7 @@ h3, h4 {
 }
 .player-controls span {
   font-size: 12px;
+  font-weight: 300;
 }
 .player-playlist {
   margin: 0 60px;
