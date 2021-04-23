@@ -18,30 +18,93 @@
       </ul>
       <ul class="sidebar-nav">
         <li class="active">
-          <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+          <a href="#" data-tab="home"><i class="fas fa-home"></i><span>Home</span></a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-compact-disc"></i><span>Music</span></a>
+          <a href="#" data-tab="music"><i class="fas fa-compact-disc"></i><span>Music</span></a>
         </li>
       </ul>
       <ul class="sidebar-socials">
         <li>
-          <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+          <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><span>YouTube</span></a>
         </li>
       </ul>
     </aside>
 
-    <main class="main">
-      
-      
+    <div class="page-wrapper">
 
-    </main>
+      <main class="main">
+      
+        <section class="section active" id="home">
+          Home
+        </section>
+  
+        <section class="section" id="music">
+          <div class="player">
+            <!-- Player Head -->
+            <div class="player-head">
+              <!-- Cover Image -->
+              <div class="player-cover">
+                <img src="/images/cover-image.jpg" alt="Cover Image" />
+              </div>
+              <!-- Dashboard -->
+              <div class="player-dashboard">
+                <!-- Track Title -->
+                <div class="player-title">
+                  <h3>Feelings</h3>
+                  <h4>Ollie</h4>
+                </div>
+                <!-- Track progress -->
+                <div class="player-track">
+                  <div class="player-track-current"></div>
+                </div>
+                <!-- Player Controls -->
+                <div class="player-controls">
+                  <span class="timer current">00:36</span>
+                  <a href="#"><i class="fas fa-step-backward"></i></a>
+                  <a href="#"><i class="fas fa-play"></i></a>
+                  <a href="#"><i class="fas fa-step-forward"></i></a>
+                  <span class="timer full">02:38</span>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Player Playlist -->
+          <div class="player player-playlist">
+            <p class="playlist-label">Playlist</p>
+            <ul>
+              <li>
+                <p>
+                  <span class="track-title">Feelings</span>
+                  <span class="track-author">Ollie</span>
+                </p>
+                <i class="fas fa-play"></i>
+              </li>
+              <li>
+                <p>
+                  <span class="track-title">Time</span>
+                  <span class="track-author">NF</span>
+                </p>
+                <i class="fas fa-play"></i>
+              </li>
+            </ul>
+          </div>
+        </section>
+  
+      </main>
+  
+      <footer class="footer">
+        <p class="legal">&copy; Created by <a href="https://www.instagram.com/bojanwebdev/" target="_blank">@bojanwebdev</a></p>
+      </footer>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/playlist.js"></script>

@@ -20,10 +20,53 @@ $font-family: 'Open Sans', sans-serif;
   list-style: none;
 }
 
+body, html, .page-wrapper {
+  height: 100%;
+}
+
 body {
   line-height: $line-height;
   font-size: $text-size;
   font-family: $font-family;
   color: $white;
   background: $gray;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: 40px 40px 40px 95px;
+}
+
+.footer {
+  padding: 0 40px 20px 95px;
+  margin-top: auto
+} 
+
+.section {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity .3s ease-in-out;
+  &.active {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.legal {
+  font-size: 12px;
+  text-align: center;
+  a {
+    color: $green;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
